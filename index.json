@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "templates": [
     {
-      "id": "research", "version": 1, "icon": "safari", "environment": "local", "requiresImageModel": false,
+      "id": "research", "version": 2, "icon": "safari", "environment": "local", "requiresImageModel": false,
       "category": {"zh": "研究", "en": "Research"},
       "title": {"zh": "资料研究员", "en": "Research Assistant"},
       "summary": {"zh": "查找资料、交叉核对来源，整理成可执行的结论。", "en": "Find sources, verify claims, and turn findings into useful conclusions."},
@@ -12,7 +12,7 @@
         {"zh": "比较两个方案的优缺点和适用场景", "en": "Compare two options and when each fits"},
         {"zh": "核实这条消息是否准确", "en": "Check whether this claim is accurate"}
       ],
-      "capabilityIDs": ["wk_browser"], "pluginIDs": [], "skillIDs": []
+      "capabilityIDs": ["wk_browser"], "pluginIDs": ["basic-cards"], "skillIDs": []
     },
     {
       "id": "photo", "version": 1, "icon": "photo.on.rectangle.angled", "environment": "local", "requiresImageModel": true,
