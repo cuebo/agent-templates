@@ -9,6 +9,10 @@ INDEX = Path(__file__).resolve().parents[1] / "index.json"
 SAFE_ID = re.compile(r"^[a-z][a-z0-9-]{1,63}$")
 SAFE_ICON = re.compile(r"^[a-z0-9.]{2,60}$")
 CAPABILITIES = {"ish_shell", "wk_browser", "calendar", "brightroom_photo"}
+SYSTEM_CAPABILITIES = {
+    "user_interaction", "memory", "scheduled_tasks", "conversation_title", "clipboard", "location",
+    "plugins", "conversations", "agents", "skills", "models", "environments",
+}
 
 
 def check_text(value, maximum):
@@ -46,6 +50,10 @@ def main():
         capabilities = item["capabilityIDs"]
         assert isinstance(capabilities, list) and len(capabilities) <= 12
         assert len(set(capabilities)) == len(capabilities) and set(capabilities) <= CAPABILITIES
+        system_capabilities = item.get("systemCapabilities", {})
+        assert isinstance(system_capabilities, dict)
+        assert system_capabilities.keys() <= SYSTEM_CAPABILITIES
+        assert all(type(enabled) is bool for enabled in system_capabilities.values())
         assert item["environment"] in {"local", "ssh"}
         assert type(item["requiresImageModel"]) is bool
     print(f"Validated {len(templates)} Agent templates")

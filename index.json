@@ -13,7 +13,8 @@
         {"zh": "核实这条消息是否准确", "en": "Check whether this claim is accurate"},
         {"zh": "把研究结论生成 PDF 报告", "en": "Create a PDF report of the research findings"}
       ],
-      "capabilityIDs": ["wk_browser", "ish_shell"], "pluginIDs": ["basic-cards"], "skillIDs": ["pdf"]
+      "capabilityIDs": ["wk_browser", "ish_shell"], "pluginIDs": ["basic-cards"], "skillIDs": ["pdf"],
+      "systemCapabilities": {"user_interaction": true, "memory": true, "scheduled_tasks": true, "conversation_title": true, "clipboard": true}
     },
     {
       "id": "photo", "version": 1, "icon": "photo.on.rectangle.angled", "environment": "local", "requiresImageModel": true,
@@ -26,7 +27,8 @@
         {"zh": "把这张照片调得自然一些", "en": "Make this photo look more natural"},
         {"zh": "帮我改善照片的光线和色彩", "en": "Improve the lighting and colors in this photo"}
       ],
-      "capabilityIDs": ["brightroom_photo"], "pluginIDs": [], "skillIDs": []
+      "capabilityIDs": ["brightroom_photo"], "pluginIDs": [], "skillIDs": [],
+      "systemCapabilities": {"user_interaction": true, "memory": true, "scheduled_tasks": true, "conversation_title": true, "clipboard": true}
     },
     {
       "id": "schedule", "version": 2, "icon": "calendar.badge.clock", "environment": "local", "requiresImageModel": false,
@@ -39,7 +41,8 @@
         {"zh": "帮我找本周一段空闲时间", "en": "Find a free slot this week"},
         {"zh": "帮我安排一个会议", "en": "Help me schedule a meeting"}
       ],
-      "capabilityIDs": ["calendar"], "pluginIDs": ["basic-cards"], "skillIDs": []
+      "capabilityIDs": ["calendar"], "pluginIDs": ["basic-cards"], "skillIDs": [],
+      "systemCapabilities": {"user_interaction": true, "memory": true, "scheduled_tasks": true, "conversation_title": true, "clipboard": true}
     },
     {
       "id": "nas", "version": 1, "icon": "server.rack", "environment": "ssh", "requiresImageModel": false,
@@ -52,7 +55,8 @@
         {"zh": "看看哪些目录占用空间最多", "en": "Find the largest folders"},
         {"zh": "检查关键服务是否正常运行", "en": "Check whether key services are running"}
       ],
-      "capabilityIDs": ["ish_shell"], "pluginIDs": [], "skillIDs": []
+      "capabilityIDs": ["ish_shell"], "pluginIDs": [], "skillIDs": [],
+      "systemCapabilities": {"user_interaction": true, "memory": true, "scheduled_tasks": true, "conversation_title": true, "clipboard": true}
     },
     {
       "id": "pdf-report", "version": 1, "icon": "doc.richtext", "environment": "local", "requiresImageModel": false,
@@ -65,7 +69,8 @@
         {"zh": "把这份 PDF 报告做成摘要卡片", "en": "Turn this PDF report into summary cards"},
         {"zh": "比较两份 PDF 的主要差异", "en": "Compare the main differences between two PDFs"}
       ],
-      "capabilityIDs": ["ish_shell"], "pluginIDs": ["basic-cards"], "skillIDs": ["pdf"]
+      "capabilityIDs": ["ish_shell"], "pluginIDs": ["basic-cards"], "skillIDs": ["pdf"],
+      "systemCapabilities": {"user_interaction": true, "memory": true, "scheduled_tasks": true, "conversation_title": true, "clipboard": true}
     }
   ]
 }
